@@ -7,7 +7,7 @@ AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY:?"env variable is required"}
 MONGO_HOST=${MONGO_HOST:?"env variable is required"}
 MONGO_PORT=${MONGO_PORT:?"env variable is required"}
 S3_BUCKET=${S3_BUCKET:?"env variable is required"}
-AWS_DEFAULT_REGION=$(python /script/get_bucket_region.py $S3_BUCKET)
+AWS_DEFAULT_REGION=${AWS_DEFAULT_RGION:?"env variable is required"}
 BACKUP_FILENAME_DATE_FORMAT=${BACKUP_FILENAME_DATE_FORMAT:-%Y%m%d}
 BACKUP_FILENAME_PREFIX=${BACKUP_FILENAME_PREFIX:-mongo_backup}
 "
